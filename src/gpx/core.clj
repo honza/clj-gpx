@@ -66,7 +66,7 @@
     0
     (+ (haversine (first coll)
                   (second coll))
-      (calculate-distance (rest coll)))))
+       (calculate-distance (rest coll)))))
 
 (defn rround [n]
   (/ (round (* n 100)) 100.0))
