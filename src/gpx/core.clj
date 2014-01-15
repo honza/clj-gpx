@@ -9,11 +9,11 @@
 (def R 6367)
  
 (defn rad [x] 
-  (* x  (/ Math/PI 180)))
+  (* x (/ Math/PI 180)))
  
 (defn meter [x] (* x 1000))
 
-;; Stolen from https://gist.github.com/frankvilhelmsen/1787462
+;; https://gist.github.com/frankvilhelmsen/1787462
 (defn haversine [position destination]
   (let [square_half_chord 
           (+ (pow (sin (/ (rad (- (destination :lat) (position :lat))) 2)) 2) 
