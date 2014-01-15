@@ -7,7 +7,6 @@
   (:gen-class))
 
 (def R 6367)
-(def path "file.gpx")
  
 (defn rad [x] 
   (* x  (/ Math/PI 180)))
@@ -52,8 +51,6 @@
   (let [raw (get-data (parse-gpx path))
         trks (:content (find-tag raw :trkseg))]
     (sort-by :time (map transform-trkpt trks))))
-
-(def points (get-points path))
 
 (defn calculate-time [coll]
   "in seconds"
